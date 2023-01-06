@@ -1,0 +1,11 @@
+[class*=icon-]::before {
+    content: "";
+    display: inline-block;
+    margin-right: .15rem;
+    width: 1em;
+    height: 1em;
+}
+
+.icon-location::before {
+    background: url(../img/icon-pin.svg);
+}

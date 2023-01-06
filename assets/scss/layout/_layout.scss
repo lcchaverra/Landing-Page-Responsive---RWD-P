@@ -1,0 +1,57 @@
+.l-container {
+    max-width: $max-width;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.l-section {
+    margin-bottom: 2rem;
+    position: relative;
+    &--diagonal {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: lighten($border-color, 17);
+            z-index: var(--z-back);
+            transform: skewY(-2deg) scaleY(1.03);
+        }
+    }
+    @include rwd(l){
+        margin-bottom: 4rem;
+        &--diagonal {
+            &::before {
+                transform: skewY(-2deg) scaleY(1.1);
+            }
+        }
+    }
+}
+
+// Anchos personalizados
+@for $i from 1 through 20 {
+    .s-#{5*$i} {
+        width: #{$i*5%};
+    }
+}
+
+@include rwd(l) {
+    @for $i from 1 through 20 {
+        .l-#{5*$i} {
+            width: #{$i*5%};
+        }
+    }
+}
+
+.center-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-content {
+    text-align: center;
+}

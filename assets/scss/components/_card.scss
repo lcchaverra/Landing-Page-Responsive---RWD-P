@@ -1,0 +1,36 @@
+.card {
+    border: 1px solid $border-color;
+    margin-bottom: 2rem;
+    &__img img {
+        display: block;
+    }
+    &__content {
+        padding: 1rem;
+        border-radius: .3rem;
+        background-color: #FFFF;
+    }
+
+    &__subtitle {
+        margin-top: -1rem;
+        margin-bottom: .5rem;
+        opacity: .6;
+    }
+
+    &__footer {
+        border-top: 1px solid $border-color;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    box-shadow: 1px 2px 3px $border-color;
+}
+
+.cards-container{
+    @include rwd(l){
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2em;
+    }
+}

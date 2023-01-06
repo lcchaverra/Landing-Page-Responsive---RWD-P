@@ -1,0 +1,19 @@
+.main-footer {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: $header-height*1.4;
+    width: 100%;
+    background-color: darken($text-color, 7);
+    color: white;
+    margin-top: auto;
+    transform: skewY(.5deg);
+    & p{
+        padding-left: 2rem;
+    }
+}
+
+.social-media a{
+    padding-right: 2rem;
+    color: white;
+}
